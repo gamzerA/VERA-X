@@ -1,0 +1,10 @@
+/*
+!/.gitignore
+!/README.md
+!/THIRD_PARTY_NOTICES.md
+!/PUBLIC_SCOPE.json
+!/site/
+**/.DS_Store
+**/.env
+**/.env.*
+**/*.map

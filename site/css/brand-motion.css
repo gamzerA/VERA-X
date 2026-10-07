@@ -1,0 +1,59 @@
+/* Shared motion grammar. Existing final hero geometry and type are retained. */
+.brand-page {
+  --brand-graphite: #171d21;
+  --brand-silver: #f3f4f0;
+  --motion-fast: 180ms;
+  --motion-state: 320ms;
+  --motion-reveal: 760ms;
+  --ease-precise: cubic-bezier(.22,1,.36,1);
+}
+.hero-media { position:absolute; inset:0; z-index:-3; will-change:transform; }
+.hero-media .hero-image { z-index:auto; }
+.hero-line { padding-bottom:.07em; margin-bottom:-.07em; }
+.brand-page .brand-header {
+  transition: background-color 230ms var(--ease-precise), color 230ms var(--ease-precise), border-color 230ms var(--ease-precise);
+}
+.brand-page .brand-start {
+  position:relative;
+  transition:background-color var(--motion-fast) var(--ease-precise),border-color 230ms var(--ease-precise),color 230ms var(--ease-precise);
+}
+.brand-page .brand-start:focus-visible { background:rgba(255,255,255,.13); border-color:rgba(255,255,255,.55); }
+.brand-page .brand-header[data-theme=light] .brand-start:focus-visible { background:rgba(41,57,67,.085); border-color:rgba(41,57,67,.6); }
+.brand-page a svg { transition:transform var(--motion-fast) var(--ease-precise); }
+.brand-page a:hover svg,.brand-page a:focus-visible svg { transform:translateX(4px); }
+.brand-page .hero-cta:hover svg,.brand-page .hero-cta:focus-visible svg { transform:translateY(4px); }
+.brand-page .brand-start:hover svg,.brand-page .brand-start:focus-visible svg,.brand-page .final-primary:hover svg,.brand-page .final-primary:focus-visible svg { transform:translateX(5px); }
+.brand-header nav>a:not(.brand-start),.final-secondary,.brand-footer>a:last-child {
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:6px;
+  text-decoration-color:transparent;
+  transition:text-decoration-color var(--motion-fast) var(--ease-precise);
+}
+.brand-header nav>a:not(.brand-start):is(:hover,:focus-visible),.final-secondary:is(:hover,:focus-visible),.brand-footer>a:last-child:is(:hover,:focus-visible) { text-decoration-color:currentColor; }
+/* Press feedback is on contents, keeping the anchor hit box stable. */
+.brand-action-label { display:inline-block; transform-origin:center; transition:transform var(--motion-fast) var(--ease-precise); }
+.brand-page .brand-start:active>.brand-action-label,.brand-page .final-primary:active>.brand-action-label { transform:scale(.985); }
+.brand-page .brand-start>svg,.brand-page .final-primary>svg { transform-origin:center; }
+.brand-page .brand-start:active>svg,.brand-page .final-primary:active>svg { transform:translateX(5px) scale(.985); }
+.brand-page .hero-cta:active>svg { transform:translateY(4px) scale(.985); }
+.brand-page .final-primary { transition:background-color var(--motion-fast) var(--ease-precise),border-color var(--motion-fast) var(--ease-precise); }
+.brand-page .final-primary:is(:hover,:focus-visible) { background:#ffffff09; border-color:#e1e8ec; }
+.final-line { display:block; overflow:hidden; padding-bottom:.08em; margin-bottom:-.08em; }
+.final-line>span { display:block; }
+.brand-page #technology:focus,.brand-page #product:focus,.brand-page #start-inspection:focus,.brand-page #brand-main:focus { outline:none; }
+.brand-footer { background:var(--brand-silver); }
+@media(prefers-reduced-motion:reduce) {
+ .hero-media,.hero-media .hero-image,.hero-line>span,.final-line>span,[data-reveal] { transform:none!important;opacity:1!important;will-change:auto; }
+ .brand-page [data-line-reveal] { stroke-dashoffset:0!important; }
+}
+
+/* CTA and the real footer share the remaining viewport in normal document flow.
+   The footer keeps its own intrinsic height, so no guessed footer offset is needed. */
+.brand-ending { display:flex; flex-direction:column; min-height:calc(100svh - var(--brand-header-height, 72px)); background:#101619; }
+.brand-ending .brand-final { flex:1; align-items:center; padding-block:clamp(56px, 8svh, 96px); }
+.brand-ending .brand-footer { flex-shrink:0; }
+@media (max-width:767px), (max-height:650px) {
+  .brand-ending { min-height:0; }
+  .brand-ending .brand-final { padding-block:64px; }
+}
