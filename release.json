@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "product": "VERA-X",
+  "version": "2.1.1",
+  "status": "published",
+  "publishedAt": "2026-10-31T02:28:54.042240+00:00",
+  "siteUrl": "https://gamzera.github.io/VERA-X/",
+  "allowedDownloadHosts": [
+    "github.com"
+  ],
+  "requirements": {
+    "platform": "macOS",
+    "chip": "Apple Silicon",
+    "os": "macOS 26.2 이상"
+  },
+  "signing": {
+    "status": "unsigned",
+    "label": "현재 검증용 배포본입니다. Apple 개발자 서명(Developer ID)과 공증은 완료되지 않았습니다."
+  },
+  "packages": [
+    {
+      "id": "dmg",
+      "label": "설치 도우미 DMG",
+      "filename": "VERA-X-Installer-2.1.1-arm64.dmg",
+      "url": "https://github.com/gamzerA/VERA-X/releases/download/v2.1.1/VERA-X-Installer-2.1.1-arm64.dmg",
+      "bytes": 2859179,
+      "sha256": "2d296acc0dd0724d7ee19ad606f8dd41a7329f8df29bd3a21a65a3287cb77406",
+      "verified": true
+    },
+    {
+      "id": "zip",
+      "label": "설치 도우미 ZIP",
+      "filename": "VERA-X-Installer-2.1.1-arm64.zip",
+      "url": "https://github.com/gamzerA/VERA-X/releases/download/v2.1.1/VERA-X-Installer-2.1.1-arm64.zip",
+      "bytes": 2868887,
+      "sha256": "44c983a419a5f32b88bf7652a61a4d291e1388ac802436ce72eba6e953b420ee",
+      "verified": true
+    }
+  ],
+  "installerType": "automatic-download-helper",
+  "helperName": "VERA-X 설치",
+  "payloadBytes": 9455391367,
+  "payloadEstimateBytes": 9500000000,
+  "requiredFreeBytes": 49769421074,
+  "examplesIncluded": false
+}

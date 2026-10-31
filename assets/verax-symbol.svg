@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 1254 1254" role="img" aria-label="VERA-X three-layer symbol">
+  <defs>
+    <linearGradient id="porcelain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.55" stop-color="#FDFDFD"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="silverBlue" x1="0" y1="0" x2="1" y2="0.3">
+      <stop offset="0" stop-color="#A9C3E1"/>
+      <stop offset="0.32" stop-color="#A7C3E0"/>
+      <stop offset="0.56" stop-color="#A9C4E2"/>
+      <stop offset="0.82" stop-color="#A5C1DE"/>
+      <stop offset="1" stop-color="#A8C3E0"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#17E6FE"/>
+      <stop offset="0.55" stop-color="#18E6FE"/>
+      <stop offset="1" stop-color="#17E6FE"/>
+    </linearGradient>
+  </defs>
+  <path id="upper-layer" fill="url(#porcelain)" d="M180 385 L628 175 L974 342 L548 541 L547 644 L180 465 Z"/>
+  <path id="middle-cross-layer" fill="url(#silverBlue)" d="M180 587 L278 543 L573 683 L929 510 L1073 576 L1073 637 L745 779 L625 724 L492 785 L180 647 Z"/>
+  <path id="lower-layer" fill="url(#cyan)" d="M180 756 L266 718 L266 774 L604 950 L999 770 L925 730 L970 709 L1074 758 L1073 818 L600 1038 L180 826 Z"/>
+</svg>
