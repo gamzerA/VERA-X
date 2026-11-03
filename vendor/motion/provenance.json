@@ -1,0 +1,10 @@
+{
+  "package": "motion",
+  "version": "13.4.6",
+  "license": "MIT",
+  "source": "https://registry.npmjs.org/motion/-/motion-13.4.6.tgz",
+  "sha256": "437d3ebd10597c811a173b093b7f1795c5cac9f856dfa6671101b6e292dfd453",
+  "entry": "dist/motion.js",
+  "paid_features": false,
+  "react_runtime": false
+}
