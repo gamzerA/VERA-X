@@ -13,3 +13,22 @@
 
 /* Download-helper details, following the existing flat package layout. */
 .package-footnote{max-width:218px;font-size:11px;color:#59666e;line-height:1.75;margin-top:2px;word-break:keep-all}.package-copy strong{font-weight:500}.download-note a,.questions details p a{text-decoration:underline;text-underline-offset:3px;color:#29586b}.questions details p strong{font-weight:600;color:#34434b}@media(max-width:700px){.package-footnote{max-width:none;font-size:11px}}
+
+/* Compact installation page; the original Hero uses its own untouched styles. */
+.download-page{background:#fff}
+.download-page .site-header{border:0}
+.download-page .site-header nav>a:first-child{display:flex}
+.download-page .site-header .release-state{color:#d1d8dc;padding:0}
+.download-page .download-section{background:#fff;border:0;padding-block:60px 48px}
+.download-page .release-summary{margin-top:0;border:0;padding:0 0 28px}
+.download-page .product-name h1{font-size:26px;font-weight:650;letter-spacing:-.025em;line-height:1.5}
+.download-page .requirements{border:0;padding:16px 0 28px}
+.download-page .package-row{border:0;padding:24px 0 32px}
+@media(max-width:700px){
+ .download-page .site-header nav{gap:16px}
+ .download-page .site-header .release-state{display:none}
+ .download-page .download-section{padding-block:36px}
+ .download-page .product-name h1{font-size:25px}
+ .download-page .release-summary{padding-bottom:20px}
+ .download-page .package-row{padding:20px 0 28px}
+}
